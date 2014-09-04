@@ -1,5 +1,5 @@
 {
-    "name": "vibius/framework",
+    "name": "vibius/development-kit",
     "type": "library",
     "description": "Vibius PHP Framework",
     "license": "MIT",
@@ -19,4 +19,4 @@
         "vibius/facade": "dev-master",
         "vibius/ConfigResolver": "dev-master"
     }
-}    
+}   
