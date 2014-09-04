@@ -1,0 +1,26 @@
+{
+    "name": "vibius/framework",
+    "type": "library",
+    "description": "Vibius PHP Framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matej Sima",
+            "email": "matej.sima@gmail.com",
+            "homepage": "http://www.facebook.com/maht0rz",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Vibius\\Facade\\":"./src/Facade/src",
+            "Vibius\\Container\\":"./src/Container/src",
+            "Vibius\\ConfigResolver":"./src/ConfigResolver/src",
+            "":"./system/aliases"
+        }
+    },
+    "minimum-stability":"dev",
+    "require": {
+        "php": ">=5.4.0"
+    }
+}    
