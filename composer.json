@@ -12,15 +12,11 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-            "Vibius\\Facade\\":"./src/Facade/src",
-            "Vibius\\Container\\":"./src/Container/src",
-            "Vibius\\ConfigResolver":"./src/ConfigResolver/src",
-            "":"./system/aliases"
-        }
     },
     "minimum-stability":"dev",
     "require": {
-        "php": ">=5.4.0"
+        "php": ">=5.4.0",
+        "vibius/facade": "dev-master",
+        "vibius/ConfigResolver": "dev-master"
     }
 }    
