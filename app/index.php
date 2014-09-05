@@ -45,12 +45,7 @@ set_error_handler($errorHandler);
 set_exception_handler($exceptionHandler);
 register_shutdown_function($shutdownHandler);
 
-// add config from app/config.php
-Config::addConfig('config');
-
-//deletes all cached aliases
-//comment out the next line to improve the performance but keep the cached aliases
-#$framework->_deleteAliases();
+//If you want to delete alias cache on every run, set deleteAliases in config.php to true
 
 //Add an alias to the app, which enables you to run container operations within "aliases" alias as shown below
 Container::open('aliases')->add('aliases', Container::open('aliases'));

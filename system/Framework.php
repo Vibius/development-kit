@@ -21,6 +21,12 @@ class Framework{
 
 		$this->aliasManager = new Vibius\Facade\AliasManager();
 		$this->aliasManager->registerAutoloader();
+
+		// add config from app/config.php
+		Config::addConfig('config');
+
+		$this->aliasManager->registerAliasDeleter();
+
 	}
 
 	public function _deleteAliases(){
