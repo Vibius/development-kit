@@ -17,7 +17,7 @@ class Framework{
 
 		require '../vendor/autoload.php';
 
-		define('BASEPATH', dirname(__DIR__).'/');
+		define('vibius_BASEPATH', dirname(__DIR__).'/');
 
 		$this->aliasManager = new Vibius\Facade\AliasManager();
 		$this->aliasManager->registerAutoloader();
