@@ -53,10 +53,10 @@ $framework->bootstrap();
 //If you want to delete alias cache on every run, set deleteAliases in config.php to true
 
 //Add an alias to the app, which enables you to run container operations within "aliases" alias as shown below
-Container::open('aliases')->add('aliases', Container::open('aliases'));
+Container::open('aliases')->add('alias', Container::open('aliases'));
 
 //now we can use Storage:: alias to operate specific container instance
-Aliases::add('storage', Container::open('storage'));
+Alias::add('storage', Container::open('storage'));
 
 /*
 	Your code goes down here 
