@@ -45,6 +45,11 @@ set_error_handler($errorHandler);
 set_exception_handler($exceptionHandler);
 register_shutdown_function($shutdownHandler);
 
+
+//Run the framework!
+$framework->bootstrap();
+
+
 //If you want to delete alias cache on every run, set deleteAliases in config.php to true
 
 //Add an alias to the app, which enables you to run container operations within "aliases" alias as shown below

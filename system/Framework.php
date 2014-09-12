@@ -35,8 +35,6 @@ class Framework{
 
 	public function start(){
 
-		$this->bootstrap();
-
 			$framework = $this;
 			require $this->app.'index.php';
 	}
