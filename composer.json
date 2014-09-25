@@ -22,6 +22,7 @@
         "vibius/facade": "dev-master",
         "vibius/container": "dev-master",
         "vibius/config-resolver": "dev-master",
-        "vibius/router": "dev-master"
+        "vibius/router": "dev-master",
+        "vibius/bug-shield": "dev-master"
     }
 }   
