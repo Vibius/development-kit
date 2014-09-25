@@ -23,7 +23,7 @@ class Framework{
 		$this->aliasManager->registerAutoloader();
 
 		// add config from app/config.php
-		Config::addConfig('config');
+		Config::add('config');
 
 		$this->aliasManager->registerAliasDeleter();
 
