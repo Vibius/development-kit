@@ -9,7 +9,7 @@ Storage::add('lel','do');
 
 
 Router::add('/',function(){
-	echo "/profile!";
+	echo "< Welcome to Vibius 3 development kit";
 });
 
 Router::add('/test',function(){
