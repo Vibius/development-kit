@@ -42,17 +42,18 @@ $exceptionHandler = function($e) use ($errorOutput){
 	die();
 };
 
-set_error_handler($errorHandler);
-set_exception_handler($exceptionHandler);
-register_shutdown_function($shutdownHandler);
+
 
 //Run the framework!
 $framework->bootstrap();
 
+set_error_handler($errorHandler);
+set_exception_handler($exceptionHandler);
+register_shutdown_function($shutdownHandler);
 
 //If you want to delete alias cache on every run, set deleteAliases in config.php to true
 
-//Add an alias to the app, which enables you to run container operations within "aliases" alias as shown below
+//Add an alias to the app, which enables you to run container operations within "alias" alias as shown below
 Container::open('aliases')->add('alias', Container::open('aliases'));
 
 //now we can use Storage:: alias to operate specific container instance
@@ -67,7 +68,3 @@ Alias::add('storage', Container::open('storage'));
 require 'app.php';
 
 
-
-/*
-	Execution time displays from here
-*/
