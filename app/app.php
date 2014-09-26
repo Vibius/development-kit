@@ -11,7 +11,8 @@ Router::add('/(profile)/<:num>', function(){
 })->alias([
 	// create an alias for the parent route, which will hold the same functions as parent,
 	// but will respond to different url/type
-	'/(profile)/<:doge>'  => 'GET'
+	'/(profile)/<:doge>'  => 'GET',
+	'/' => 'GET'
 ]);
 
 // add some regex alternatives for routes
