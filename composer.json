@@ -23,6 +23,7 @@
         "vibius/container": "dev-master",
         "vibius/config-resolver": "dev-master",
         "vibius/router": "dev-master",
-        "vibius/bug-shield": "dev-master"
+        "vibius/bug-shield": "dev-master",
+        "vibius/AbstractTemplating": "dev-master"
     }
-}   
+}
