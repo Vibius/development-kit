@@ -24,6 +24,6 @@
         "vibius/config-resolver": "dev-master",
         "vibius/router": "dev-master",
         "vibius/bug-shield": "dev-master",
-        "vibius/AbstractTemplating": "dev-master"
+        "vibius/abstract-templating": "dev-master"
     }
 }
