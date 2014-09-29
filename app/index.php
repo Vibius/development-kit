@@ -4,20 +4,22 @@
 	App setup
 */
 
-$errorOutput = function($message, $line, $file){
+$errorOutput = function($message, $line, $file, $trace = []){
+
+
 	/*echo "
 		<h2>Something went wrong: </h2>
 		<p> $message </p>
 		<p> On line: <b>$line</b>, in file: <b>$file</b> </p>
 	";*/
-	Shield::deffend($message, $line, $file, 'now empty', 'now empty');
+	Shield::deffend($message, $line, $file, 'now empty', 'now empty', $trace);
 };
 
 
 
 $errorHandler = function($errno, $errstr, $errfile, $errline) use ($errorOutput){
 	ob_clean();
-	$errorOutput($errstr, $errline, $errfile);
+	$errorOutput($errstr, $errline, $errfile, debug_backtrace());
 	die();
 };
 
@@ -28,7 +30,7 @@ $shutdownHandler = function() use ($errorOutput){
 		$errstr = $error['message'];
 		$errline = $error['line'];
 		$errfile = $error['file'];
-		$errorOutput($errstr, $errline, $errfile);	
+		$errorOutput($errstr, $errline, $errfile, debug_backtrace());	
 	}
 };
 
@@ -37,8 +39,7 @@ $exceptionHandler = function($e) use ($errorOutput){
 	$message = $e->getMessage();
 	$line = $e->getLine();
 	$file = $e->getFile();
-
-	$errorOutput($message, $line, $file);
+	$errorOutput($message, $line, $file, $e->getTrace());
 	die();
 };
 
